@@ -1,0 +1,8 @@
+git config --global user.name anglusa
+git config --global user.email otavio.baroni@etec.sp.gov.br
+
+
+executar no terminal
+    dotnet new mvc -o GCook
+    dotnet new sln --name GCook
+    dotnet sln add GCook\GCook.csproj

@@ -6,3 +6,9 @@ executar no terminal
     dotnet new mvc -o GCook
     dotnet new sln --name GCook
     dotnet sln add GCook\GCook.csproj
+
+Criar migrações
+dotnet ef migrations add criar-banco
+
+Executar migração e alterar o banco de dados
+dotnet ef database update

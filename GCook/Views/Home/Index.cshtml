@@ -1,8 +1,95 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model GCook.ViewModels.HomeVM
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+   <div class="pt-2 container">
+            <div class="row ">
+                <div class="col mx-auto text-center">
+                    <h1 class="display-4 text-white">GCook</h1>
+                    <div class="mt-2 mb-4">
+                        <button id="btn-all" class="btn btn-md my-2 text-white bg-secondary btn-filter">
+                            Ver Todos
+                        </button>
+                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
+                            Carnes
+                        </button>
+                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
+                            Frango
+                        </button>
+                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
+                            Lanches
+                        </button>
+                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
+                            Pratos
+                        </button>
+                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
+                            Massas
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+
+                <!-- Card Receita - Inicio -->
+                <div class="col">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card bg-dark border-white">
+                            <img src="img/receitas/1.jpg" class="card-img-top" alt="Nome" height="260"
+                                style="object-fit: cover;" />
+                            <div class="card-body">
+                                <h5 class="card-title text-white mb-3">Carne Moída Mexicana</h5>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-white">Carnes</span>
+                                    <span class="text-white">3 Ingredientes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card Receita - Fim -->
+
+                <!-- Card Receita - Inicio -->
+                <div class="col">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card bg-dark border-white">
+                            <img src="img/receitas/1.jpg" class="card-img-top" alt="Nome" height="260"
+                                style="object-fit: cover;" />
+                            <div class="card-body">
+                                <h5 class="card-title text-white mb-3">Carne Moída Mexicana</h5>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-white">Carnes</span>
+                                    <span class="text-white">3 Ingredientes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card Receita - Fim -->
+
+                <!-- Card Receita - Inicio -->
+                <div class="col">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card bg-dark border-white">
+                            <img src="img/receitas/1.jpg" class="card-img-top" alt="Nome" height="260"
+                                style="object-fit: cover;" />
+                            <div class="card-body">
+                                <h5 class="card-title text-white mb-3">Carne Moída Mexicana</h5>
+                                <div class="d-flex justify-content-between">
+                                    <span class="text-white">Carnes</span>
+                                    <span class="text-white">3 Ingredientes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Card Receita - Fim -->
+
+
+                <div id="zeroData" class="col-lg-12 text-center" hidden>
+                    <h1 class="my-3 text-danger">Nenhuma Receita Encontrado</h1>
+                </div>
+            </div>
+
+        </div>

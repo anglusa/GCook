@@ -3,93 +3,45 @@
     ViewData["Title"] = "Home";
 }
 
-   <div class="pt-2 container">
-            <div class="row ">
-                <div class="col mx-auto text-center">
-                    <h1 class="display-4 text-white">GCook</h1>
-                    <div class="mt-2 mb-4">
-                        <button id="btn-all" class="btn btn-md my-2 text-white bg-secondary btn-filter">
-                            Ver Todos
-                        </button>
-                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
-                            Carnes
-                        </button>
-                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
-                            Frango
-                        </button>
-                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
-                            Lanches
-                        </button>
-                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
-                            Pratos
-                        </button>
-                        <button id="btn-cafe" class="btn btn-sm my-2 text-white btn-outline-secondary btn-filter">
-                            Massas
-                        </button>
+<div class="pt-4 container">
+    <div class="d-flex flex-column text-center text-white ">
+        <h1 class="display-4">GCook</h1>
+        <hr>
+        <h5>Escolha sua categoria</h5>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-2 mt-2"></div>
+        @foreach (Categoria categoria in Model.Categorias)
+        {
+            <div class="col">
+                    <div class="bg-ligth rounded">
+                        <img src="@categoria.Foto" class="w-100 rounded-top-2" alt="@categoria.Nome">
+                        <h3 class="display-4 fs-6 text-dark py-2">
+                            @categoria.Nome
+                        </h3>
                     </div>
-                </div>
             </div>
+        }
+    </div>
+</div>
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
 
-                <!-- Card Receita - Inicio -->
-                <div class="col">
-                    <a href="#" class="text-decoration-none">
-                        <div class="card bg-dark border-white">
-                            <img src="img/receitas/1.jpg" class="card-img-top" alt="Nome" height="260"
-                                style="object-fit: cover;" />
-                            <div class="card-body">
-                                <h5 class="card-title text-white mb-3">Carne Moída Mexicana</h5>
-                                <div class="d-flex justify-content-between">
-                                    <span class="text-white">Carnes</span>
-                                    <span class="text-white">3 Ingredientes</span>
-                                </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 mt-4">
+        @foreach (Receita receita in Model.Receitas)
+        {
+            <!-- Card Receita - Inicio -->
+            <div class="col">
+                <a asp-action="Receita" asp-route-itemid="@receita.Id" class="text-decoration-none">
+                    <div class="card bg-dark border-white">
+                        <img src="@receita.Foto" class="card-img-top object-fit-cover" alt="@receita.Nome" height="260" />
+                        <div class="card-body">
+                            <h5 class="card-title text-white mb-3">@receita.Nome</h5>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-white">@receita.Categoria.Nome</span>
+                                <span class="text-white">@receita.Ingredientes.Count() Ingredientes</span>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <!-- Card Receita - Fim -->
-
-                <!-- Card Receita - Inicio -->
-                <div class="col">
-                    <a href="#" class="text-decoration-none">
-                        <div class="card bg-dark border-white">
-                            <img src="img/receitas/1.jpg" class="card-img-top" alt="Nome" height="260"
-                                style="object-fit: cover;" />
-                            <div class="card-body">
-                                <h5 class="card-title text-white mb-3">Carne Moída Mexicana</h5>
-                                <div class="d-flex justify-content-between">
-                                    <span class="text-white">Carnes</span>
-                                    <span class="text-white">3 Ingredientes</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Card Receita - Fim -->
-
-                <!-- Card Receita - Inicio -->
-                <div class="col">
-                    <a href="#" class="text-decoration-none">
-                        <div class="card bg-dark border-white">
-                            <img src="img/receitas/1.jpg" class="card-img-top" alt="Nome" height="260"
-                                style="object-fit: cover;" />
-                            <div class="card-body">
-                                <h5 class="card-title text-white mb-3">Carne Moída Mexicana</h5>
-                                <div class="d-flex justify-content-between">
-                                    <span class="text-white">Carnes</span>
-                                    <span class="text-white">3 Ingredientes</span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- Card Receita - Fim -->
-
-
-                <div id="zeroData" class="col-lg-12 text-center" hidden>
-                    <h1 class="my-3 text-danger">Nenhuma Receita Encontrado</h1>
-                </div>
+                    </div>
+                </a>
             </div>
-
-        </div>
+            <!-- Card Receita - Fim -->
+        }
+    </div>

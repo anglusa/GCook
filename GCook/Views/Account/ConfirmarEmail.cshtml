@@ -1,0 +1,19 @@
+@model bool
+@{
+    ViewData["Title"] = "Confirmação de Conta";
+    ViewData["SubTitle"] = Model ? "Conta Confirmada Com Sucesso" : "Problemas Ao Confirmar Conta";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<div class="card-body text-center text-white">
+    <h4 class="mb-2">As Melhores Receitas da Internet</h4>
+    @if (Model)
+    {
+        <p class="mb-4 fs-5">Obrigado por confirmar seu email,clique no botão abaixo para entrar!</p>
+        <a asp-action="Login" asp-controller="Account" class="btn btn-danger text-white">Ir para o login</a>
+    }
+    else
+    {
+        <p class="mb-4 fs-5">Infelizmente ocorreu um problema com a aconfirmação de sua conta! Entre em contato para solucionarmos seu problema </p>
+    }
+</div>

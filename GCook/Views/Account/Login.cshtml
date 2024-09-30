@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Login";
     ViewData["SubTitle"] = "Entrar";
-    Layout = "~/Views/Shared/ LayoutAccount.cshtml";
+    Layout = "~/Views/Shared/LayoutAccount.cshtml";
 }
 <form class="form-signin" method="post">
     <div asp-validation-summary="ModelOnly" hidden></div>
@@ -33,7 +33,7 @@
 
 @section Scripts {
     <script type="text/javascript">
-        let mensagemErro = * ';
+        let mensagemErro = * '';
         $(" .validation-summary-errors ul 1i").each(function () {
             mensagemErro += $(this).text() + '<br/>';
         });

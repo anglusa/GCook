@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Registro";
     ViewData["SubTitle"] = Model.Enviado ? "Conta Criada com Sucesso" : "Criar Conta";
-    Layout = "~/Views/Shared/LayoutAccount.cshtml";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
 }
 
 @if (!Model.Enviado)
@@ -62,13 +62,13 @@
             </div>
         </div>
 
-        <button class="btn btn-lg w-100 btn-danger" type="submit" id="submit" disabled>Criar Conta</button>
-            <p class="mt-3 mb-3 text-white text-center">
-                Já possui uma conta?
-                <a asp-action="Login" class="text-white fw-bold text-decoration-none">
-                    Faça Login Aqui
-                </a>
-            </p>
+        <button class="btn btn-lg w-100 btn-danger" type="submit" id="submit" abled>Criar Conta</button>
+        <p class="mt-3 mb-3 text-white text-center">
+            Já possui uma conta?
+            <a asp-action="Login" class="text-white fw-bold text-decoration-none">
+                Faça Login Aqui
+            </a>
+        </p>
     </form>
 }
 else
@@ -87,7 +87,7 @@ else
 
     <script type="text/javascript">
 
-        let mensagemErro = * '';
+        let mensagemErro = '';
         $(" .validation-summary-errors ul 1i").each(function () {
             mensagemErro += $(this).text() + '<br/>';
         });

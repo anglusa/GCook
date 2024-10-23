@@ -35,25 +35,25 @@
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="sidebar-sticky pt-4">
                     <ul class="nav flex-column pe-2">
-                        <li class="nav-item py-1 bg-dark rounded-end-5">
-                            <a class="nav-link fs-6 active" asp-action="Index" asp-controller="Admin">
+                        <li class='nav-item py-1 @(ViewData["Title"] == "Área Administrativa" ? "bg-dark rounded-end-5" : "")'>
+                            <a class='nav-link fs-6  @(ViewData["Title"] == "Área Administrativa" ? "text-white" : "")' asp-action="Index" asp-controller="Admin">
                                 <i class="bi bi-house-fill fs-5"></i> Home
                             </a>
                         </li>
-                        <li class="nav-item py-1">
-                            <a class="nav-link fs-6" href="#">
+                        <li class='nav-item py-1 @(ViewData["Title"] == "Receitas" ? "bg-dark rounded-end-5" : "")'>
+                            <a class='nav-link fs-6  @(ViewData["Title"] == "Receitas" ? "text-white" : "")' href="#">
                                 <i class="bi bi-file-text-fill fs-5"></i>
                                 Receitas
                             </a>
                         </li>
-                        <li class="nav-item py-1">
-                            <a class="nav-link fs-6" asp-action="Index" asp-controller="Categorias">
+                        <li class='nav-item py-1 @(ViewData["Title"] == "Categorias" ? "bg-dark rounded-end-5" : "")'>
+                            <a class='nav-link fs-6 @(ViewData["Title"] == "Categorias" ? "text-white" : "")' asp-action="Index" asp-controller="Categorias" >
                                 <i class="bi bi-fire fs-5"></i>
                                 Categorias
                             </a>
                         </li>
-                        <li class="nav-item py-1">
-                            <a class="nav-link fs-6" href="#">
+                        <li class='nav-item py-1 @(ViewData["Title"] == "Ingredientes" ? "bg-dark rounded-end-5" : "")'>
+                            <a class='nav-link fs-6 @(ViewData["Title"] == "Ingredientes" ? "text-white" : "")' href="#">
                                 <i class="bi bi-egg-fried"></i>
                                 Ingredientes
                             </a>

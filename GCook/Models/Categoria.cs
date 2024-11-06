@@ -9,7 +9,7 @@ public class Categoria
     [Key]
     public int Id { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Por favor, informe o nome")]
     [StringLength(30)]
     public string Nome { get; set; }
 

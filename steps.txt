@@ -15,3 +15,9 @@ dotnet ef database update
 
 Gerar Controller e Views de CRUD:
     dotnet-aspnet-codegenerator controller -name CategoriasController -m Categoria -dc AppDbContext -l "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
+
+alterar a Receitas\Index.cshtml - 
+alterar a Receitas\Create.cshtml - div e script
+alterar o ReceitasController - 
+
+dotnet-aspnet-codegenerator controller -name ReceitasController -m Receita -dc AppDbContext -l "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers
